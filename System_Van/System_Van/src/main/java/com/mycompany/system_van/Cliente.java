@@ -32,15 +32,6 @@ public class Cliente {
         this.id = id;
     }
 
-    /*public Cliente(String nome, String endereco, int tel, String email, int CPF, int RG){
-        this.CPF = CPF;
-        this.RG = RG;
-        this.email = email;
-        this.endereco = endereco;
-        this.nome = nome;
-        this.tel = tel;   
-    }*/
-
     
     public String getNome() {
         return nome;
