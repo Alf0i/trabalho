@@ -34,11 +34,11 @@ public class System_Van {
             //add van
             System.out.println("DADOS DA VAN\n");
             van.objeto.id = viagem.objeto.id;
-            System.out.println("km da van: \n");
+            System.out.println("km da van: ");
             van.objeto.Km = sc.nextInt();
-            System.out.println("Quantidade de bancos: \n");
+            System.out.println("Quantidade de bancos: ");
             van.objeto.bancos =  sc.nextInt();
-            System.out.println("Estado de manutenção: \n");
+            System.out.println("Estado de manutenção: ");
             van.objeto.manutencao = sc.next();
                 
             listaBanco.add(van);
@@ -47,13 +47,13 @@ public class System_Van {
             System.out.println("____________________________________________________\n");
             System.out.println("DADOS DA VIAGEM\n");
             
-            System.out.println("Nome do Gerente: \n");
+            System.out.println("Nome do Gerente: ");
             viagem.objeto.gerente = sc.next();
-            System.out.println("Nome do motorista: \n");
+            System.out.println("Nome do motorista: ");
             viagem.objeto.motorista = sc.next();
-            System.out.println("Cidade de partida: \n");
+            System.out.println("Cidade de partida: ");
             viagem.objeto.partida = sc.next();
-            System.out.println("Cidade destino: \n");
+            System.out.println("Cidade destino: ");
             viagem.objeto.destino = sc.next();
             
             //add dados da viagem
@@ -63,17 +63,17 @@ public class System_Van {
             System.out.println("DADOS DO(S) CLIENTE(S)\n");
             while(i==0){
                 cliente.objeto.id = viagem.objeto.id;
-                System.out.println("Digite o nome: \n");
+                System.out.println("Digite o nome: ");
                 cliente.objeto.nome = sc.next();
-                System.out.println("Digite o CPF: \n");
+                System.out.println("Digite o CPF: ");
                 cliente.objeto.CPF = sc.nextInt();
-                System.out.println("Digite RG: \n");
+                System.out.println("Digite RG: ");
                 cliente.objeto.RG = sc.nextInt();
-                System.out.println("Insira o e-mail \n");
+                System.out.println("Insira o e-mail ");
                 cliente.objeto.email = sc.next();
-                System.out.println("Insira o endereço: \n");
+                System.out.println("Insira o endereço: ");
                 cliente.objeto.endereco = sc.next();
-                System.out.println("Insira o número do telefone: \n");
+                System.out.println("Insira o número do telefone: ");
                 cliente.objeto.tel = sc.nextInt();
 
                 //add dados do cliente na lista
@@ -98,10 +98,10 @@ public class System_Van {
             for(BancoGenerico<Viagem> b: listaBanco){
                 if (id_procura == b.objeto.id){
                     System.out.println("DADOS DA VIAGEM\n");
-                    System.out.println("Nome do gerente: \n"+viagem.objeto.gerente);
-                    System.out.println("Nome do motorista: \n"+viagem.objeto.gerente);
-                    System.out.println("Local de partida: \n"+viagem.objeto.partida);
-                    System.out.println("Local de destino: \n"+viagem.objeto.destino);
+                    System.out.println("Nome do gerente: "+viagem.objeto.gerente);
+                    System.out.println("Nome do motorista: "+viagem.objeto.gerente);
+                    System.out.println("Local de partida: "+viagem.objeto.partida);
+                    System.out.println("Local de destino: "+viagem.objeto.destino);
                     System.out.println("______________________________________________________\n");
 
                 }
@@ -110,9 +110,9 @@ public class System_Van {
             for(BancoGenerico<Van> b :listaBanco){
                 if (id_procura == b.objeto.id){
                     System.out.println("DADOS DA VAN\n");
-                    System.out.println("KM: \n"+van.objeto.Km);
-                    System.out.println("Manutenção: \n"+van.objeto.manutencao);
-                    System.out.println("Bancos: \n"+van.objeto.bancos);
+                    System.out.println("KM: "+van.objeto.Km);
+                    System.out.println("Manutenção: "+van.objeto.manutencao);
+                    System.out.println("Bancos: "+van.objeto.bancos);
                     System.out.println("______________________________________________________\n");
 
                 }
@@ -121,12 +121,12 @@ public class System_Van {
             for(BancoGenerico<Cliente> b :listaBanco){
                 if (id_procura == b.objeto.id){ 
                     System.out.println("DADOS DO CLIENTE\n");
-                    System.out.println("nome cliente: \n" +cliente.objeto.nome);
-                    System.out.println("CPF: \n" +cliente.objeto.CPF);
-                    System.out.println("RG: \n" +cliente.objeto.RG);
-                    System.out.println("e-mail: \n"+cliente.objeto.email);
-                    System.out.println("Endereço: \n" +cliente.objeto.endereco);
-                    System.out.println("Telefone: \n" +cliente.objeto.tel);
+                    System.out.println("nome cliente: " +cliente.objeto.nome);
+                    System.out.println("CPF: " +cliente.objeto.CPF);
+                    System.out.println("RG: " +cliente.objeto.RG);
+                    System.out.println("e-mail: "+cliente.objeto.email);
+                    System.out.println("Endereço: " +cliente.objeto.endereco);
+                    System.out.println("Telefone: " +cliente.objeto.tel);
                     System.out.println("______________________________________________________\n");
                 } 
             }
