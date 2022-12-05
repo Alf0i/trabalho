@@ -94,9 +94,14 @@ public class System_Van {
             System.out.println("Digite código da viagem a ser pesquisada: \n");        
             id_procura =sc.nextInt();
 
+            
 
             for(BancoGenerico<Viagem> b: listaBanco){
-                if (id_procura == b.objeto.id){
+                try{
+                if (id_procura == b.objeto.id){}}
+                catch(ClassCastException e){
+                }  
+                finally{
                     System.out.println("DADOS DA VIAGEM\n");
                     System.out.println("Nome do gerente: "+viagem.objeto.gerente);
                     System.out.println("Nome do motorista: "+viagem.objeto.gerente);
