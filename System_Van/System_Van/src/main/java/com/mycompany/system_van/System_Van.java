@@ -19,6 +19,7 @@ public class System_Van {
         int a, i = 0, id, id_procura;
         Scanner sc = new Scanner(System.in);
         ArrayList<BancoGenerico>listaBanco = new ArrayList<>();
+        ArrayList<BancoGenerico>listaEspera = new ArrayList<>();
         BancoGenerico<Cliente> cliente = new BancoGenerico<>(new Cliente());
         BancoGenerico<Van> van = new BancoGenerico<>(new Van());
         BancoGenerico<Viagem> viagem = new BancoGenerico<>(new Viagem());
@@ -75,10 +76,16 @@ public class System_Van {
                 cliente.objeto.endereco = sc.next();
                 System.out.println("Insira o número do telefone: ");
                 cliente.objeto.tel = sc.nextInt();
-
-               //add dados do cliente na lista
-                listaBanco.add(cliente);
-
+                
+                //add dados do cliente na lista
+                System.out.println("Deseja colocar na lista de espera? 0-sim | 1-Não");
+                int b =0;
+                b = sc.nextInt();
+                if(b==1){
+                    listaBanco.add(cliente);
+               }else{
+                    listaEspera.add(cliente);
+                }
                 System.out.println("Deseja adicionar mais um cliente a essa viagem?\n sim-0 | não-1\n");
                 i = sc.nextInt();
             }
