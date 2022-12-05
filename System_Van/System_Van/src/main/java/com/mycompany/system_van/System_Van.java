@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class System_Van {
 
     public static void main(String[] args) {
-        int a, i = 0, id, id_procura;
+        int a, i = 0, id_procura;
         Scanner sc = new Scanner(System.in);
         ArrayList<BancoGenerico>listaBanco = new ArrayList<>();
         ArrayList<BancoGenerico>listaEspera = new ArrayList<>();
@@ -79,7 +79,7 @@ public class System_Van {
                 
                 //add dados do cliente na lista
                 System.out.println("Deseja colocar na lista de espera? 0-sim | 1-Não");
-                int b =0;
+                int b;
                 b = sc.nextInt();
                 if(b==1){
                     listaBanco.add(cliente);
