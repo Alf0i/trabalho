@@ -24,8 +24,7 @@ public class System_Van {
         BancoGenerico<Van> van = new BancoGenerico<>(new Van());
         BancoGenerico<Viagem> viagem = new BancoGenerico<>(new Viagem());
         
-        
-        
+   
         //adicionar dados no banco de dados
         do{ 
             //Endereço dos dados na lista
