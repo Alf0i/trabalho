@@ -28,7 +28,7 @@ public class System_Van {
         //adicionar dados no banco de dados
         do{ 
             //Endereço dos dados na lista
-            System.out.print("\nid da viage: ");
+            System.out.print("\nid da viagem: ");
             viagem.objeto.id = sc.nextInt();
 
             //add van
@@ -149,7 +149,7 @@ public class System_Van {
                         System.out.print("Digite código da lista de espera a ser pesquisada: \n");        
                         id_procura =sc.nextInt();
                         
-                        for(BancoGenerico<Cliente> b :listaBanco){
+                        for(BancoGenerico<Cliente> b :listaEspera){
                             if (id_procura == b.objeto.id){}}}
                                catch(ClassCastException e){
                                    System.out.println("Menssage: " +e.getMessage());
