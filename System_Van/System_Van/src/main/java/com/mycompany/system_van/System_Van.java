@@ -94,29 +94,30 @@ public class System_Van {
             System.out.println("Digite código da viagem a ser pesquisada: \n");        
             id_procura =sc.nextInt();
 
-            
+          
 
-            for(BancoGenerico<Viagem> b: listaBanco){
-                try{
-                if (id_procura == b.objeto.id){}}
+            
+                try{for(BancoGenerico<Viagem> b: listaBanco){
+                if (id_procura == b.objeto.id){}}}
                 catch(ClassCastException e){
                     System.out.println("Menssage: " +e.getMessage());
 
                 }finally{
                     System.out.println("DADOS DA VIAGEM\n");
                     System.out.println("Nome do gerente: "+viagem.objeto.gerente);
-                    System.out.println("Nome do motorista: "+viagem.objeto.gerente);
+                    System.out.println("Nome do motorista: "+viagem.objeto.motorista);
                     System.out.println("Local de partida: "+viagem.objeto.partida);
                     System.out.println("Local de destino: "+viagem.objeto.destino);
                     System.out.println("______________________________________________________\n");
                     
                 }
-            }
+            
         
-            for(BancoGenerico<Van> b :listaBanco){
-                try{
-                 if (id_procura == b.objeto.id){}}
+            
+                try{for(BancoGenerico<Van> b :listaBanco){
+                 if (id_procura == b.objeto.id){}}}
                 catch(ClassCastException e){
+                    System.out.println("Menssage: " +e.getMessage());
                 }  
                 finally{
                     System.out.println("DADOS DA VAN\n");
@@ -125,12 +126,13 @@ public class System_Van {
                     System.out.println("Bancos: "+van.objeto.bancos);
                     System.out.println("______________________________________________________\n");
                 } 
-            }
+            
 
-            for(BancoGenerico<Cliente> b :listaBanco){
-                try{
-                 if (id_procura == b.objeto.id){}}
+            
+                try{for(BancoGenerico<Cliente> b :listaBanco){
+                 if (id_procura == b.objeto.id){}}}
                 catch(ClassCastException e){
+                    System.out.println("Menssage: " +e.getMessage());
                 }  
                 finally{
                     System.out.println("DADOS DO CLIENTE\n");
@@ -142,7 +144,7 @@ public class System_Van {
                     System.out.println("Telefone: " +cliente.objeto.tel);
                     System.out.println("______________________________________________________\n");
                 } 
-            }
+            
         System.out.println("Deseja fazer mais uma pesquisa? 0-sim | 1-Não");
         a=sc.nextInt();
         }
