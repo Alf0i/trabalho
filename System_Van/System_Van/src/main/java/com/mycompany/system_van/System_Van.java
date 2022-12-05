@@ -101,7 +101,7 @@ public class System_Van {
                 if (id_procura == b.objeto.id){}}
                 catch(ClassCastException e){
                     System.out.println("Menssage: " +e.getMessage());
-                    System.out.println("Cause: "+e.getCause());
+
                 }finally{
                     System.out.println("DADOS DA VIAGEM\n");
                     System.out.println("Nome do gerente: "+viagem.objeto.gerente);
@@ -109,7 +109,7 @@ public class System_Van {
                     System.out.println("Local de partida: "+viagem.objeto.partida);
                     System.out.println("Local de destino: "+viagem.objeto.destino);
                     System.out.println("______________________________________________________\n");
-
+                    
                 }
             }
         
