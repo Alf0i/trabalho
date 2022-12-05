@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class System_Van {
 
     public static void main(String[] args) {
-        int a, i = 0, id_procura;
+        int a, i = 0, id, id_procura;
         Scanner sc = new Scanner(System.in);
         ArrayList<BancoGenerico>listaBanco = new ArrayList<>();
         ArrayList<BancoGenerico>listaEspera = new ArrayList<>();
@@ -29,17 +29,17 @@ public class System_Van {
         //adicionar dados no banco de dados
         do{ 
             //Endereço dos dados na lista
-            System.out.print("\nid da viagem");
+            System.out.println("id da viagem");
             viagem.objeto.id = sc.nextInt();
 
             //add van
             System.out.println("DADOS DA VAN\n");
             van.objeto.id = viagem.objeto.id;
-            System.out.print("\nkm da van: ");
+            System.out.println("km da van: ");
             van.objeto.Km = sc.nextInt();
-            System.out.print("\nQuantidade de bancos: ");
+            System.out.println("Quantidade de bancos: ");
             van.objeto.bancos =  sc.nextInt();
-            System.out.print("\nEstado de manutenção: ");
+            System.out.println("Estado de manutenção: ");
             van.objeto.manutencao = sc.next();
                 
             listaBanco.add(van);
@@ -48,13 +48,13 @@ public class System_Van {
             System.out.println("____________________________________________________\n");
             System.out.println("DADOS DA VIAGEM\n");
             
-            System.out.print("\nNome do Gerente: ");
+            System.out.println("Nome do Gerente: ");
             viagem.objeto.gerente = sc.next();
-            System.out.print("\nNome do motorista: ");
+            System.out.println("Nome do motorista: ");
             viagem.objeto.motorista = sc.next();
-            System.out.print("\nCidade de partida: ");
+            System.out.println("Cidade de partida: ");
             viagem.objeto.partida = sc.next();
-            System.out.print("\nCidade destino: ");
+            System.out.println("Cidade destino: ");
             viagem.objeto.destino = sc.next();
             
             //add dados da viagem
@@ -64,22 +64,23 @@ public class System_Van {
             System.out.println("DADOS DO(S) CLIENTE(S)\n");
             while(i==0){
                 cliente.objeto.id = viagem.objeto.id;
-                System.out.print("Digite o nome: ");
+                System.out.println("Digite o nome: ");
                 cliente.objeto.nome = sc.next();
-                System.out.print("\nDigite o CPF: ");
+                System.out.println("Digite o CPF: ");
                 cliente.objeto.CPF = sc.nextInt();
-                System.out.print("\nDigite RG: ");
+                System.out.println("Digite RG: ");
                 cliente.objeto.RG = sc.nextInt();
-                System.out.print("\nInsira o e-mail: ");
+                System.out.println("Insira o e-mail ");
                 cliente.objeto.email = sc.next();
-                System.out.print("\nInsira o endereço: ");
+                System.out.println("Insira o endereço: ");
                 cliente.objeto.endereco = sc.next();
-                System.out.print("\nInsira o número do telefone: ");
+                System.out.println("Insira o número do telefone: ");
                 cliente.objeto.tel = sc.nextInt();
                 
                 //add dados do cliente na lista
                 System.out.println("Deseja colocar na lista de espera? 0-sim | 1-Não");
-                int b = sc.nextInt();
+                int b =0;
+                b = sc.nextInt();
                 if(b==1){
                     listaBanco.add(cliente);
                 }else{
@@ -97,10 +98,10 @@ public class System_Van {
         a= 0;
         while(a==0){
             System.out.println("______________PESQUISA______________");
-            System.out.println("\nQue tepo de pesquisa você deseja fazer?\n                  1-Viagem | 0-Lista de Espera");
+            System.out.println("Que tepo de pesquisa você deseja fazer?\n                  1-Viagem | 0-Lista de Espera");
             int o = sc.nextInt();
             if(o==1){
-                System.out.print("\nDigite código da viagem a ser pesquisada: ");        
+                System.out.println("Digite código da viagem a ser pesquisada: \n");        
                 id_procura =sc.nextInt();
 
                     try{
@@ -148,7 +149,7 @@ public class System_Van {
             }else{
                 if(o==0){
                     try{
-                        System.out.print("Digite código da viagem a ser pesquisada: \n");        
+                        System.out.println("Digite código da viagem a ser pesquisada: \n");        
                         id_procura =sc.nextInt();
                         
                         for(BancoGenerico<Cliente> b :listaBanco){
