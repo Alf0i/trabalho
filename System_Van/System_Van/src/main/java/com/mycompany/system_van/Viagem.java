@@ -17,7 +17,7 @@ public class Viagem {
     int id;
     
     
-    public Viagem(){
+     public Viagem(){
     }
     
     
