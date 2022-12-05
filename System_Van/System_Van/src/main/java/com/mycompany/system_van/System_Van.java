@@ -76,7 +76,7 @@ public class System_Van {
                 System.out.println("Insira o número do telefone: ");
                 cliente.objeto.tel = sc.nextInt();
 
-                //add dados do cliente na lista
+               //add dados do cliente na lista
                 listaBanco.add(cliente);
 
                 System.out.println("Deseja adicionar mais um cliente a essa viagem?\n sim-0 | não-1\n");
@@ -113,18 +113,25 @@ public class System_Van {
             }
         
             for(BancoGenerico<Van> b :listaBanco){
-                if (id_procura == b.objeto.id){
+                try{
+                 if (id_procura == b.objeto.id){}}
+                catch(ClassCastException e){
+                }  
+                finally{
                     System.out.println("DADOS DA VAN\n");
                     System.out.println("KM: "+van.objeto.Km);
                     System.out.println("Manutenção: "+van.objeto.manutencao);
                     System.out.println("Bancos: "+van.objeto.bancos);
                     System.out.println("______________________________________________________\n");
-
-                }
+                } 
             }
 
             for(BancoGenerico<Cliente> b :listaBanco){
-                if (id_procura == b.objeto.id){ 
+                try{
+                 if (id_procura == b.objeto.id){}}
+                catch(ClassCastException e){
+                }  
+                finally{
                     System.out.println("DADOS DO CLIENTE\n");
                     System.out.println("nome cliente: " +cliente.objeto.nome);
                     System.out.println("CPF: " +cliente.objeto.CPF);
