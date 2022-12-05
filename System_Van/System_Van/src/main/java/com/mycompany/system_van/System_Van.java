@@ -100,8 +100,9 @@ public class System_Van {
                 try{
                 if (id_procura == b.objeto.id){}}
                 catch(ClassCastException e){
-                }  
-                finally{
+                    System.out.println("Menssage: " +e.getMessage());
+                    System.out.println("Cause: "+e.getCause());
+                }finally{
                     System.out.println("DADOS DA VIAGEM\n");
                     System.out.println("Nome do gerente: "+viagem.objeto.gerente);
                     System.out.println("Nome do motorista: "+viagem.objeto.gerente);
