@@ -8,10 +8,8 @@ package com.mycompany.system_van;
  *
  * @author aluno.cyber
  */
-public class Viagem {
+public class Viagem extends Colaboradores{
 // saber quem é o motorista que será responsável pela viagem, bem como o gerente | cidade de partida e a cidade de destino
-    String gerente;
-    String motorista;
     String partida;
     String destino;
     int id;
@@ -19,7 +17,6 @@ public class Viagem {
     
      public Viagem(){
     }
-    
     
     public Viagem(String motorista, String gerente, String partida, String destino, int id){
         this.gerente = gerente;
