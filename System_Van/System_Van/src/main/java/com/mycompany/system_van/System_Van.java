@@ -83,7 +83,7 @@ public class System_Van {
                 b = sc.nextInt();
                 if(b==1){
                     listaBanco.add(cliente);
-                }else{
+               }else{
                     listaEspera.add(cliente);
                 }
                 System.out.println("Deseja adicionar mais um cliente a essa viagem?\n sim-0 | não-1\n");
@@ -93,83 +93,68 @@ public class System_Van {
         a = sc.nextInt();
         }while(a==0);
         
+        a= 0;
+        
         
         // Realizar pesquisas no banco de dados
-        a= 0;
         while(a==0){
-            System.out.println("______________PESQUISA______________");
-            System.out.println("Que tepo de pesquisa você deseja fazer?\n                  1-Viagem | 0-Lista de Espera");
-            int o = sc.nextInt();
-            if(o==1){
-                System.out.println("Digite código da viagem a ser pesquisada: \n");        
-                id_procura =sc.nextInt();
+            System.out.println("Digite código da viagem a ser pesquisada: \n");        
+            id_procura =sc.nextInt();
 
-                    try{
-                        for(BancoGenerico<Viagem> b: listaBanco){
-                            if (id_procura == b.objeto.id){}}}
-                                catch(ClassCastException e){
-                                    System.out.println("Menssage: " +e.getMessage());
-                                }finally{
-                                    System.out.println("DADOS DA VIAGEM\n");
-                                    System.out.println("Nome do gerente: "+viagem.objeto.gerente);
-                                    System.out.println("Nome do motorista: "+viagem.objeto.motorista);
-                                    System.out.println("Local de partida: "+viagem.objeto.partida);
-                                    System.out.println("Local de destino: "+viagem.objeto.destino);
-                                    System.out.println("______________________________________________________\n");
-                                }
+          
 
-                    try{
-                        for(BancoGenerico<Van> b :listaBanco){
-                            if (id_procura == b.objeto.id){}}}
-                                catch(ClassCastException e){
-                                    System.out.println("Menssage: " +e.getMessage());
-                                }finally{
-                                    System.out.println("DADOS DA VAN\n");
-                                    System.out.println("KM: "+van.objeto.Km);
-                                    System.out.println("Manutenção: "+van.objeto.manutencao);
-                                    System.out.println("Bancos: "+van.objeto.bancos);
-                                    System.out.println("______________________________________________________\n");
-                                } 
+            
+                try{for(BancoGenerico<Viagem> b: listaBanco){
+                if (id_procura == b.objeto.id){}}}
+                catch(ClassCastException e){
+                    System.out.println("Menssage: " +e.getMessage());
 
-                    try{
-                        for(BancoGenerico<Cliente> b :listaBanco){
-                            if (id_procura == b.objeto.id){}}}
-                               catch(ClassCastException e){
-                                   System.out.println("Menssage: " +e.getMessage());
-                               }finally{
-                                   System.out.println("DADOS DO CLIENTE\n");
-                                   System.out.println("nome cliente: " +cliente.objeto.nome);
-                                   System.out.println("CPF: " +cliente.objeto.CPF);
-                                   System.out.println("RG: " +cliente.objeto.RG);
-                                   System.out.println("e-mail: "+cliente.objeto.email);
-                                   System.out.println("Endereço: " +cliente.objeto.endereco);
-                                   System.out.println("Telefone: " +cliente.objeto.tel);
-                                   System.out.println("______________________________________________________\n");
-                               }
-            }else{
-                if(o==0){
-                    try{
-                        System.out.println("Digite código da viagem a ser pesquisada: \n");        
-                        id_procura =sc.nextInt();
-                        
-                        for(BancoGenerico<Cliente> b :listaBanco){
-                            if (id_procura == b.objeto.id){}}}
-                               catch(ClassCastException e){
-                                   System.out.println("Menssage: " +e.getMessage());
-                               }finally{
-                                   System.out.println("DADOS DO CLIENTE\n");
-                                   System.out.println("nome cliente: " +cliente.objeto.nome);
-                                   System.out.println("CPF: " +cliente.objeto.CPF);
-                                   System.out.println("RG: " +cliente.objeto.RG);
-                                   System.out.println("e-mail: "+cliente.objeto.email);
-                                   System.out.println("Endereço: " +cliente.objeto.endereco);
-                                   System.out.println("Telefone: " +cliente.objeto.tel);
-                                   System.out.println("______________________________________________________\n");
-                               }
+                }finally{
+                    System.out.println("DADOS DA VIAGEM\n");
+                    System.out.println("Nome do gerente: "+viagem.objeto.gerente);
+                    System.out.println("Nome do motorista: "+viagem.objeto.motorista);
+                    System.out.println("Local de partida: "+viagem.objeto.partida);
+                    System.out.println("Local de destino: "+viagem.objeto.destino);
+                    System.out.println("______________________________________________________\n");
+                    
                 }
-            }
+            
+        
+            
+                try{for(BancoGenerico<Van> b :listaBanco){
+                 if (id_procura == b.objeto.id){}}}
+                catch(ClassCastException e){
+                    System.out.println("Menssage: " +e.getMessage());
+                }  
+                finally{
+                    System.out.println("DADOS DA VAN\n");
+                    System.out.println("KM: "+van.objeto.Km);
+                    System.out.println("Manutenção: "+van.objeto.manutencao);
+                    System.out.println("Bancos: "+van.objeto.bancos);
+                    System.out.println("______________________________________________________\n");
+                } 
+            
+
+            
+                try{for(BancoGenerico<Cliente> b :listaBanco){
+                 if (id_procura == b.objeto.id){}}}
+                catch(ClassCastException e){
+                    System.out.println("Menssage: " +e.getMessage());
+                }  
+                finally{
+                    System.out.println("DADOS DO CLIENTE\n");
+                    System.out.println("nome cliente: " +cliente.objeto.nome);
+                    System.out.println("CPF: " +cliente.objeto.CPF);
+                    System.out.println("RG: " +cliente.objeto.RG);
+                    System.out.println("e-mail: "+cliente.objeto.email);
+                    System.out.println("Endereço: " +cliente.objeto.endereco);
+                    System.out.println("Telefone: " +cliente.objeto.tel);
+                    System.out.println("______________________________________________________\n");
+                } 
+            
         System.out.println("Deseja fazer mais uma pesquisa? 0-sim | 1-Não");
-        a=sc.nextInt();        
+        a=sc.nextInt();
         }
-    }    
+    }
 }
+
